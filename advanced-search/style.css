@@ -1,0 +1,28 @@
+.table-wrap {
+    height: 240px;
+    width: 340px;
+    overflow-y: auto;
+}
+
+td {
+    max-width: 200px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+body {
+    width: 500px;
+    height: 100px;
+}
+
+#se-notification {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: opacity 5s ease, height 5s ease;
+}
+
+.btn-cursor {
+    cursor:pointer;
+}

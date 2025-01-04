@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>options</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="common/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body class="--bs-body-bg">
+        <nav class="nav nav-tabs" role="tablist">
+                <a class="nav-link active" id="hl-nav-btn" data-toggle="tab" aria-current="page" href="#highlighter"><b>Highlighter</b></a>
+                <a class="nav-link" id="f-nav-btn" data-toggle="tab" aria-current="page" href="#filter"><b>Filter</b></a>
+                <a class="nav-link" id="o-nav-btn" data-toggle="tab" aria-current="page" href="#options"><b>Options</b></a>
+        </nav>
+        <div class="container-fluid">
+            <form id="optionsForm">
+                <div class="tab-content">
+                    <div class="h4 pb-2 mb-4 text-warning border-bottom border-warning" id="se-notification">
+                    </div>
+                    <div id="options" class="tab-pane">
+                        <button id="defaultO" class="btn btn-info" type="button">restore default options</button>
+                    </div>
+                    <div id="highlighter" class="tab-pane active">
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="hlState">Enable</label>
+                            <input class="form-check-input btn-cursor" type="checkbox" name="hlState" id="hlState" role="switch">
+                            <br>
+                            <label class="form-check-label" for="hlTxtColor">Text color</label>
+                            <input class="form-check-input btn-cursor" type="color" id="hlTxtColor" name="hlTxtColor" value="#ff0000">
+                            <br>
+                            <label class="form-check-label" for="hlBgColor">Background color</label>
+                            <input class="form-check-input btn-cursor" type="color" id="hlBgColor" name="hlBgColor" value="#ff0000">
+                            <br>   
+                            <label for="hlBgOpacity">Background opacity</label>
+                            <br>
+                            <input class="multi-range w-50 btn-cursor" value="100" type="range" min="0" max="100" id="hlBgOpacity" name="hlBgOpacity">
+                            <output>100%</output>
+                            <label class="form-check-label" for="hlSearchState">Highlight text from search bar</label>
+                            <input class="form-check-input btn-cursor" type="checkbox" name="hlSearchState" id="hlSearchState" role="switch">               
+
+                            <div class="input-group-sm">
+                                <span class="input-group-text border-bottom-0">Search words from text</span>
+                                <textarea class="form-control" aria-label="With textarea" name="hlWordList" id="hlWordList" placeholder="cats"></textarea>
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="filter" class="tab-pane">
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="fState">Enable</label>
+                            <input class="form-check-input btn-cursor" type="checkbox" name="fState" id="fState" role="switch">
+                            <br>
+                            <select class="form-select-sm w-50 overflow-scroll btn-cursor" aria-label="select" id="fSite">
+                            <span>only search</span>
+                                <option selected disabled hidden>youtube.com</option>
+                            </select>
+                            <br>
+                            <br>
+                            <button class="btn btn-primary" id="updateUrl" type="button"><b>Update urls?</b></button>
+                            <div class="table-wrap" id="updateTableDiv" hidden>
+                                <table class="table table-dark table-hover">
+                                    <thead>
+                                        <th>urls</th>
+                                        <th>update</th>
+                                    </thead>
+                                <tbody id="updateTable">
+                                    <tr>
+                                        <td><input id="addNewSiteInp" placeholder="example.com" type="text"></td>
+                                        <td><button class="btn btn-success btn-cursor" id="addNewSiteBtn" type="button"><b>Add</b></button></td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+            <script src="/common/jquery/jquery.js"></script>
+            <script src="common/bootstrap/tab.js"></script>
+            <script defer src="scripts/options.js" type="module"></script>
+    </body>
+</html>

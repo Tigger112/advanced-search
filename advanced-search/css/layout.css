@@ -1,0 +1,96 @@
+#button-container {
+    all: revert;
+    display: grid;
+    grid-template-columns: repeat(2, calc(84px + 20px));
+    align-items: center;
+    position: relative;
+    width: 217px;
+    max-width: 400px;
+    height: 46px;
+    background: #282828;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 35px;
+}
+
+.button {
+    all: revert;
+    user-select: none;
+    cursor:pointer;
+    display:inline-block;
+    width: 84px;
+    height: 36px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    margin-left: 18px;
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+.button:not(:first-child) {
+    margin-left: 10px;
+}
+
+.button-text {
+    all: revert;
+    position: relative;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    top: -15px;
+    text-transform: capitalize;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.display-state {
+    all: revert;
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 16px;
+    top: -28px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.on {
+    background: #AC8A8A;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.on:hover {
+    background-color:#A28181;
+}
+
+.off {
+    background: #5A5A5A;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.off:hover {
+    background: #777777;
+}
+
+
+
+.state-text {
+    all: revert;
+    position: relative;
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    text-transform: capitalize;
+    
+    color: #FFFFFF;
+}
+
+
+
