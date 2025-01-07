@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "Advanced Search",
+    "version": "1.0",
+    "description": "advanced search enhances to Google search experience",
+    "background": {
+      "service_worker": "scripts/service-worker.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+      "16": "icons/16icon.png",
+      "32": "icons/32icon.png",
+      "48": "icons/48icon.png",
+      "128": "icons/128icon.png"
+    },
+    "permissions": [
+      "webNavigation",
+      "activeTab",
+      "storage",
+      "tabs"
+    ],
+    "content_scripts": [
+      {
+        "js": [
+          "scripts/utility.js", 
+          "scripts/highlighter.js",
+          "scripts/filter.js",
+          "scripts/overlay.js"
+        ],
+        "css": [
+          "css/layout.css"
+        ],
+        "matches": [
+          "https://www.google.com/search*"
+        ]
+        
+      }
+    ]
+  }
